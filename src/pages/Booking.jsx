@@ -108,13 +108,13 @@ const Booking = () => {
 
   if (showSuccess) {
     return (
-      <div className="max-w-2xl mx-auto px-4 py-16">
-        <div className="card text-center">
-          <div className="text-6xl mb-6">✅</div>
-          <h2 className="text-3xl font-bold text-green-600 mb-4">
+      <div className="max-w-2xl mx-auto px-4 py-8 md:py-12">
+        <div className="card text-center p-6 md:p-8">
+          <div className="text-4xl md:text-6xl mb-4 md:mb-6">✅</div>
+          <h2 className="text-2xl md:text-3xl font-bold text-green-600 mb-3 md:mb-4">
             تم إرسال طلب الحجز بنجاح!
           </h2>
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
             شكراً لك! تم حفظ تفاصيل حجزك وسيتم التواصل معك قريباً لتأكيد الموعد.
           </p>
           <p className="text-sm text-gray-500">
@@ -126,55 +126,55 @@ const Booking = () => {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-8">
-      <div className="text-center mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-beauty-text mb-4 hero-gradient bg-clip-text text-transparent">
+    <div className="max-w-2xl mx-auto px-4 py-2">
+      <div className="text-center mb-3">
+        <h1 className="text-xl md:text-2xl font-bold text-beauty-text mb-1 hero-gradient bg-clip-text text-transparent">
           احجزي موعدك
         </h1>
-        <p className="text-lg text-beauty-muted">
+        <p className="text-xs md:text-sm text-beauty-muted">
           املئي النموذج أدناه وسنقوم بالتواصل معك لتأكيد الموعد
         </p>
       </div>
 
-      <div className="card">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Full Name */}
-          <div>
-            <label htmlFor="fullName" className="label">
-              الاسم الكامل *
-            </label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleInputChange}
-              className="input-field"
-              placeholder="أدخلي اسمك الكامل"
-              required
-            />
-          </div>
-
-          {/* Phone Number */}
-          <div>
-            <label htmlFor="phoneNumber" className="label">
-              رقم الهاتف *
-            </label>
-            <input
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleInputChange}
-              className="input-field"
-              placeholder="مثال: +966501234567"
-              required
-            />
+      <div className="card p-4">
+        <form onSubmit={handleSubmit} className="space-y-2">
+          {/* Name and Phone Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div>
+              <label htmlFor="fullName" className="label text-xs md:text-sm mb-1">
+                الاسم الكامل *
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                className="input-field py-2 text-sm"
+                placeholder="الاسم الكامل"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="phoneNumber" className="label text-xs md:text-sm mb-1">
+                رقم الهاتف *
+              </label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+                className="input-field py-2 text-sm"
+                placeholder="+966501234567"
+                required
+              />
+            </div>
           </div>
 
           {/* Service Type */}
           <div>
-            <label htmlFor="serviceType" className="label">
+            <label htmlFor="serviceType" className="label text-xs md:text-sm mb-1">
               نوع الخدمة *
             </label>
             <select
@@ -182,7 +182,7 @@ const Booking = () => {
               name="serviceType"
               value={formData.serviceType}
               onChange={handleInputChange}
-              className="input-field"
+              className="input-field py-2 text-sm"
               required
             >
               <option value="">اختيار الخدمة</option>
@@ -194,49 +194,49 @@ const Booking = () => {
             </select>
           </div>
 
-          {/* Preferred Date */}
-          <div>
-            <label htmlFor="preferredDate" className="label">
-              التاريخ المفضل *
-            </label>
-            <input
-              type="date"
-              id="preferredDate"
-              name="preferredDate"
-              value={formData.preferredDate}
-              onChange={handleInputChange}
-              className="input-field"
-              min={getMinDate()}
-              max={getMaxDate()}
-              required
-            />
-          </div>
-
-          {/* Preferred Time */}
-          <div>
-            <label htmlFor="preferredTime" className="label">
-              الوقت المفضل *
-            </label>
-            <select
-              id="preferredTime"
-              name="preferredTime"
-              value={formData.preferredTime}
-              onChange={handleInputChange}
-              className="input-field"
-              required
-            >
-              <option value="">اختيار الوقت</option>
-              {timeSlots.map(time => (
-                <option key={time} value={time}>
-                  {time}
-                </option>
-              ))}
-            </select>
+          {/* Date and Time Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div>
+              <label htmlFor="preferredDate" className="label text-xs md:text-sm mb-1">
+                التاريخ المفضل *
+              </label>
+              <input
+                type="date"
+                id="preferredDate"
+                name="preferredDate"
+                value={formData.preferredDate}
+                onChange={handleInputChange}
+                className="input-field py-2 text-sm"
+                min={getMinDate()}
+                max={getMaxDate()}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="preferredTime" className="label text-xs md:text-sm mb-1">
+                الوقت المفضل *
+              </label>
+              <select
+                id="preferredTime"
+                name="preferredTime"
+                value={formData.preferredTime}
+                onChange={handleInputChange}
+                className="input-field py-2 text-sm"
+                required
+              >
+                <option value="">اختيار الوقت</option>
+                {timeSlots.map(time => (
+                  <option key={time} value={time}>
+                    {time}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
 
           {/* Notes */}
           <div>
-            <label htmlFor="notes" className="label">
+            <label htmlFor="notes" className="label text-xs md:text-sm mb-1">
               ملاحظات إضافية (اختياري)
             </label>
             <textarea
@@ -244,8 +244,8 @@ const Booking = () => {
               name="notes"
               value={formData.notes}
               onChange={handleInputChange}
-              className="input-field"
-              rows={4}
+              className="input-field py-2 text-sm"
+              rows={2}
               placeholder="أي ملاحظات أو طلبات خاصة..."
             />
           </div>
@@ -255,7 +255,7 @@ const Booking = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`btn-primary text-lg px-8 py-4 ${
+              className={`btn-primary text-sm md:text-base px-6 py-2 md:py-3 ${
                 isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
               }`}
             >
@@ -265,15 +265,11 @@ const Booking = () => {
         </form>
       </div>
 
-      {/* Info Section */}
-      <div className="mt-8 card bg-beauty-light">
-        <h3 className="text-lg font-bold text-beauty-text mb-3">معلومات مهمة:</h3>
-        <ul className="text-beauty-muted space-y-2 text-sm">
-          <li>• سيتم تأكيد الموعد خلال 24 ساعة</li>
-          <li>• يرجى الحضور قبل الموعد بـ 10 دقائق</li>
-          <li>• يمكن إلغاء أو تغيير الموعد قبل 24 ساعة من الموعد المحدد</li>
-          <li>• للاستفسارات: +966 50 123 4567</li>
-        </ul>
+      {/* Info Section - Compact */}
+      <div className="mt-3 p-3 bg-beauty-light rounded-lg">
+        <p className="text-xs text-beauty-muted text-center">
+          <span className="font-semibold">ملاحظة:</span> سيتم تأكيد الموعد خلال 24 ساعة • للحضور قبل الموعد بـ 10 دقائق • للاستفسارات: +966 50 123 4567
+        </p>
       </div>
     </div>
   )

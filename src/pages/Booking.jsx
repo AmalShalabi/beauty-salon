@@ -15,12 +15,12 @@ const Booking = () => {
   const [showSuccess, setShowSuccess] = useState(false)
 
   const services = [
-    { value: 'facial', label: 'العناية بالوجه', price: '150 ريال' },
-    { value: 'manicure', label: 'العناية بالأظافر', price: '80 ريال' },
-    { value: 'waxing', label: 'إزالة الشعر', price: '120 ريال' },
-    { value: 'haircut', label: 'تصفيف الشعر', price: '200 ريال' },
-    { value: 'makeup', label: 'المكياج', price: '250 ريال' },
-    { value: 'natural-treatments', label: 'العلاجات الطبيعية', price: '180 ريال' }
+    { value: 'facial', label: 'العناية بالوجه', price: '150 ₪' },
+    { value: 'manicure', label: 'العناية بالأظافر', price: '80 ₪' },
+    { value: 'waxing', label: 'إزالة الشعر', price: '120 ₪' },
+    { value: 'haircut', label: 'تصفيف الشعر', price: '200 ₪' },
+    { value: 'makeup', label: 'المكياج', price: '250 ₪' },
+    { value: 'natural-treatments', label: 'العلاجات الطبيعية', price: '180 ₪' }
   ]
 
   const timeSlots = [

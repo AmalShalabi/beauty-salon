@@ -28,7 +28,7 @@ const Home = () => {
           خدماتنا المميزة
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
-          <div className="service-card text-center p-3">
+          <Link to="/service/facial" className="service-card text-center p-3 block hover:transform hover:scale-105 transition-all duration-300">
             <div className="w-full h-20 md:h-24 mb-2 rounded-lg overflow-hidden bg-gradient-to-br from-pink-200 to-pink-300 flex items-center justify-center">
               <img 
                 src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=300&fit=crop&crop=face" 
@@ -45,10 +45,10 @@ const Home = () => {
             <p className="text-xs text-beauty-muted mb-1 hidden md:block">
               تنظيف عميق للوجه
             </p>
-            <span className="text-beauty-primary font-bold text-xs">150 ريال</span>
-          </div>
+            <span className="text-beauty-primary font-bold text-xs">150 ₪</span>
+          </Link>
 
-          <div className="service-card text-center p-3">
+          <Link to="/service/manicure" className="service-card text-center p-3 block hover:transform hover:scale-105 transition-all duration-300">
             <div className="w-full h-20 md:h-24 mb-2 rounded-lg overflow-hidden bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
               <img 
                 src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop" 
@@ -65,10 +65,10 @@ const Home = () => {
             <p className="text-xs text-beauty-muted mb-1 hidden md:block">
               مانيكير وباديكير
             </p>
-            <span className="text-beauty-primary font-bold text-xs">80 ريال</span>
-          </div>
+            <span className="text-beauty-primary font-bold text-xs">80 ₪</span>
+          </Link>
 
-          <div className="service-card text-center p-3">
+          <Link to="/service/waxing" className="service-card text-center p-3 block hover:transform hover:scale-105 transition-all duration-300">
             <div className="w-full h-20 md:h-24 mb-2 rounded-lg overflow-hidden bg-gradient-to-br from-rose-200 to-rose-300 flex items-center justify-center">
               <img 
                 src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=300&fit=crop" 
@@ -85,10 +85,10 @@ const Home = () => {
             <p className="text-xs text-beauty-muted mb-1 hidden md:block">
               بالشمع أو الليزر
             </p>
-            <span className="text-beauty-primary font-bold text-xs">120 ريال</span>
-          </div>
+            <span className="text-beauty-primary font-bold text-xs">120 ₪</span>
+          </Link>
 
-          <div className="service-card text-center p-3">
+          <Link to="/service/haircut" className="service-card text-center p-3 block hover:transform hover:scale-105 transition-all duration-300">
             <div className="w-full h-20 md:h-24 mb-2 rounded-lg overflow-hidden bg-gradient-to-br from-amber-200 to-amber-300 flex items-center justify-center">
               <img 
                 src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop" 
@@ -105,10 +105,10 @@ const Home = () => {
             <p className="text-xs text-beauty-muted mb-1 hidden md:block">
               قص وتصفيف
             </p>
-            <span className="text-beauty-primary font-bold text-xs">200 ريال</span>
-          </div>
+            <span className="text-beauty-primary font-bold text-xs">200 ₪</span>
+          </Link>
 
-          <div className="service-card text-center p-3">
+          <Link to="/service/makeup" className="service-card text-center p-3 block hover:transform hover:scale-105 transition-all duration-300">
             <div className="w-full h-20 md:h-24 mb-2 rounded-lg overflow-hidden bg-gradient-to-br from-red-200 to-red-300 flex items-center justify-center">
               <img 
                 src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop" 
@@ -125,10 +125,10 @@ const Home = () => {
             <p className="text-xs text-beauty-muted mb-1 hidden md:block">
               للمناسبات
             </p>
-            <span className="text-beauty-primary font-bold text-xs">250 ريال</span>
-          </div>
+            <span className="text-beauty-primary font-bold text-xs">250 ₪</span>
+          </Link>
 
-          <div className="service-card text-center p-3">
+          <Link to="/service/natural-treatments" className="service-card text-center p-3 block hover:transform hover:scale-105 transition-all duration-300">
             <div className="w-full h-20 md:h-24 mb-2 rounded-lg overflow-hidden bg-gradient-to-br from-green-200 to-green-300 flex items-center justify-center">
               <img 
                 src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=300&fit=crop" 
@@ -145,8 +145,8 @@ const Home = () => {
             <p className="text-xs text-beauty-muted mb-1 hidden md:block">
               بالزيوت والأعشاب
             </p>
-            <span className="text-beauty-primary font-bold text-xs">180 ريال</span>
-          </div>
+            <span className="text-beauty-primary font-bold text-xs">180 ₪</span>
+          </Link>
         </div>
       </div>
 

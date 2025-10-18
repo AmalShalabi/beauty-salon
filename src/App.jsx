@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Booking from './pages/Booking'
 import Admin from './pages/Admin'
+import ServiceDetails from './pages/ServiceDetails'
 import Layout from './components/Layout'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/service/:serviceId" element={<ServiceDetails />} />
       </Routes>
     </Layout>
   )

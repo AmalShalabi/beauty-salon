@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Cairo', Arial, sans-serif;
+  }
+  
+  body {
+    @apply bg-beauty-background text-beauty-text;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6B9D' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-beauty-gradient hover:shadow-lg text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-beauty-accent hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md;
+  }
+  
+  .card {
+    @apply bg-beauty-surface rounded-2xl shadow-xl p-6 border border-beauty-border hover:shadow-2xl transition-all duration-300;
+    background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-beauty-border rounded-xl focus:ring-2 focus:ring-beauty-primary focus:border-beauty-primary transition-all duration-300 bg-beauty-surface;
+  }
+  
+  .label {
+    @apply block text-beauty-text font-semibold mb-2;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, #FF6B9D 0%, #C44569 50%, #E91E63 100%);
+  }
+  
+  .service-card {
+    @apply card hover:transform hover:scale-105 transition-all duration-300 cursor-pointer;
+    background: linear-gradient(145deg, #ffffff 0%, #fff8f0 100%);
+  }
+  
+  .service-card img {
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:transform hover:scale-105;
+  }
+  
+  .nav-link.active {
+    @apply bg-beauty-gradient text-white shadow-lg;
+  }
+  
+  .nav-link:not(.active) {
+    @apply text-beauty-text hover:bg-beauty-light hover:text-beauty-primary;
+  }
+}
+
